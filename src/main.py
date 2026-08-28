@@ -1,5 +1,3 @@
-print("welcome to ikisaki torii")
-
 cities = ["tokyo", "kyoto", "osaka", "hakone", "nara", "hiroshima", "kanazawa"]
 food = ["katsu", "sushi", "ramen", "curry", "ice cream"]
 shrines = ["asakusa", "hanazono", "shibuya", "meiji"]
@@ -35,29 +33,32 @@ shrines = ["asakusa", "hanazono", "shibuya", "meiji"]
 
 import random
 
-choose_display = (input("welcome!! what would you like to view today?\n")).lower()
+welcome_msg = print("welcome to ikisaki torii!!\n")
 
-if choose_display in "destinations":
-    print(cities)
-elif choose_display in "food":
-    print(food)
-elif choose_display in "shrines":
-    print(shrines)
-else:
-    print("sry babe, that's not supported at this time!! try again")
+# to be turned into functions:
+# 1. sort by category or destination & view corresponding data
+# 2. choose where to go or randomize
 
-print("your japan destinations:")
-for number, city in enumerate(cities, start = 1):
-    print(f"{number}. {city}")
+def select_destination():
+    where = input("choose your destination or say 'surprise me'.\n").lower()
+    random_city = random.choice(cities)
+    if where == "surprise me":
+        print(f"let's explore {random_city}")
+    elif where in cities:
+        print(f"welcome to {where}")
+    else:
+        print("sorry, that city is not currently supported. try again!!")
 
-where = input("choose your destination or say 'surprise me'\n").lower()
-random_city = random.choice(cities)
+def select_category():
+    choice = (input("which category would you like to view?\ntype destinations, food, or shrines\n")).lower()
+    if choice == "destinations":
+        print(cities)
+    elif choice == "food":
+        print(food)
+    elif choice == "shrines":
+        print(shrines)
+    else:
+        print("sorry, that category is not supported at this time. try again!!")    
 
-if where == "surprise me":
-    print(f"you're going to {random_city}!!")
-elif where in cities:
-    print(f"welcome to {where}!!")
-else:
-    print("sry babe, that's not one of your destinations!! try again")
-
-
+select_destination()
+select_category()
