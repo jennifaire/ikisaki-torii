@@ -7,3 +7,4 @@
 ## aug 14th - added initial destination data & interactive destination selection. added food & shrine categories, random destination selection & numbered destination display. also added commented list of comprehensive desired categories to eventually cover.
 ## aug 27th - refactored destination & category features into reusable functions and improved application structure.
 ## sept 4th - implemented first nested dictionary with prefectures, neighborhoods, shrines, & train stations.
+## sept 11th - replaced print statements with returns on select_category function
