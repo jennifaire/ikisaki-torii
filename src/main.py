@@ -759,10 +759,6 @@ cities = {
 
 welcome_msg = print("welcome to ikisaki torii!!\n")
 
-# to be turned into functions:
-# 1. sort by category or destination & view corresponding data
-# 2. choose where to go or randomize
-
 def select_destination():
     where = input("choose your destination or say 'surprise me'.\n").lower()
     random_city = random.choice(main_cities)
@@ -776,13 +772,15 @@ def select_destination():
 def select_category():
     choice = (input("which category would you like to view?\ntype destinations, food, or shrines\n")).lower()
     if choice == "destinations":
-        print(main_cities)
+        return main_cities
     elif choice == "food":
-        print(food)
+        return food
     elif choice == "shrines":
-        print(shrines)
+        return shrines
     else:
         print("sorry, that category is not supported at this time. try again!!")    
+    
 
 select_destination()
-select_category()
+category = select_category()
+print(category)
