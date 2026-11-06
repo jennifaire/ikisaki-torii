@@ -4,6 +4,7 @@
 #
 # development log
 
+## nov 6th - created tokyo_weather.py to begin API weather requests 
 ## oct 2nd - played around with instances in class_drafting
 ## sept 18th - created class_drafting.py to practice OOP
 ## sept 11th - replaced print statements with returns on select_category function
