@@ -4,6 +4,7 @@
 #
 # development log
 
+## nov 13th - created save_a_place.py & travel_alerts.py to build save location framework & transit alerts, respectively.
 ## nov 6th - created tokyo_weather.py to begin API weather requests 
 ## oct 2nd - played around with instances in class_drafting
 ## sept 18th - created class_drafting.py to practice OOP
